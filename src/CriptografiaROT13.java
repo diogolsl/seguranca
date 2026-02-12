@@ -19,22 +19,6 @@ public class CriptografiaROT13 {
         return cifra;
         }
 
-    private static String descriptografar(String texto) {
-        String cifra = "";
-
-        for (int i = 0; i < texto.length(); i++) {
-            int letraOriginal = texto.charAt(i);
-            int letraCifrada = letraOriginal;
-
-            if (letraOriginal >= 97 && ( letraOriginal <= 109)) {
-                letraCifrada = (letraOriginal - 13);
-            } else if ((letraOriginal >= 110) && (letraOriginal <= 122)) {
-                letraCifrada = (letraOriginal + 13);
-            }
-            cifra += ((char) letraCifrada);
-        }
-        return cifra;
-        }
     public static void main(String[] args) {
         // declarar variaveis
         BufferedReader leitor = new BufferedReader(
