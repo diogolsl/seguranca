@@ -44,19 +44,21 @@ public class Vigenere {
             System.out.println("Digite um texto: ");
             texto = leitor.readLine();
 
-            System.out.println("Digite uma chave: ");
-            chave = leitor.readLine();
-
-
             cifra = encriptar(texto , chave);
             System.out.println(cifra);
 
+            System.out.println("Digite a cifra: ");
+            cifra = leitor.readLine();
+
+            System.out.println("Digite a chave: ");
+            chave = leitor.readLine();
+
             texto = decriptar(cifra, chave);
             System.out.println(texto);
-
+            
         } catch (Exception erro) {
             System.out.println("FUDEU  " + erro);
         }
-        
+
     }
 }
