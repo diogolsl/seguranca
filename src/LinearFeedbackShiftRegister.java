@@ -20,7 +20,10 @@ public class LinearFeedbackShiftRegister {
         }
     }
     private static boolean rotacionar(boolean[] registrador, boolean tipo) {
+        // salva o bit que caiu
         boolean retorno = registrador[0];
+
+        //bit que vai entrar no final
         boolean novoBit = retorno;
         if (! tipo) {
             novoBit = (novoBit ^ registrador[31] ^ registrador[6] ^
@@ -30,6 +33,7 @@ public class LinearFeedbackShiftRegister {
             novoBit = (novoBit ^ registrador[31] ^ registrador[6] ^
                                  registrador[5] ^ registrador[1]);
         }
+        // move todo mundo uma casa pra esquerda
         for (int i = 0; i < (registrador.length - 1); i++) {
             registrador[i] = registrador[i + 1];
         }
