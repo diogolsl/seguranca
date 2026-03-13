@@ -51,7 +51,7 @@ public class CriptoanaliseOTP {
                 System.out.println();
 
             } catch (Exception e) {
-                System.out.print(e);
+                System.out.println(e);
             }
 
 
